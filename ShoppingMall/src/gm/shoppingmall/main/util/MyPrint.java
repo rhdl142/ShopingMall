@@ -39,7 +39,7 @@ public class MyPrint {
 	 */
 	public void menu(String[] str) {
 		for (int i = 1; i <= str.length; i++) {
-			System.out.printf("\t\t\t\t\t%s. %s\n", i, str[i - 1]);
+			System.out.printf("%s. %s\n", i, str[i - 1]);
 		}
 		line();
 	}
@@ -134,7 +134,16 @@ public class MyPrint {
 		sc.nextLine();
 	}
 	
-	
+	public void title(String label) {
+		eline();
+		
+		for (int i = 0; i < (Util.LONG / 2)-(label.length()/2); i++) {
+			System.out.print(" ");
+		}
+		System.out.println(label);
+		
+		eline();
+	}
 	
 
 }

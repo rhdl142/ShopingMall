@@ -20,5 +20,7 @@ public class Util {
 	 */
 	public final static int LONG = 70;
 	
+	public final static String ELSEMENT = "잘못입력하셨습니다. 다시입력해주시기 바랍니다.";
+	
 	
 }
