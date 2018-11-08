@@ -21,4 +21,6 @@ public class Util {
 	public final static int LONG = 70;
 	
 	
+	public final static String[] adminMenu = {"회원 관리","상품 관리","주문/배송 관리","고객 센터 관리","매출 관리","상위 메뉴로 돌아가기","종료"};
+	
 }

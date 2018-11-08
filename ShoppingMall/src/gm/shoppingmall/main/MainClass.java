@@ -1,8 +1,15 @@
 package gm.shoppingmall.main;
 
-public class Mainclass {
-	public static String isAuth;
+import gm.shoppingmall.main.util.BreadCrumbs;
 
+public class MainClass {
+	public static String isAuth;
+	public static BreadCrumbs crumb;
+	
+	static {
+		crumb = new BreadCrumbs();
+	}
+	
 	public static void main(String[] args) {
 		System.out.println("===========================================================================================");
 		System.out.println("\t┌─────┐ ┌─┐   ┌──────┐ ┌──┐ ┌──────┐┌────────────┐  ┌─┐         ┌──┐                              ");
