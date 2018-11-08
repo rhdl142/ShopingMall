@@ -134,16 +134,25 @@ public class MyPrint {
 		sc.nextLine();
 	}
 	
-	public void title(String label) {
-		eline();
-		
-		for (int i = 0; i < (Util.LONG / 2)-(label.length()/2); i++) {
-			System.out.print(" ");
-		}
-		System.out.println(label);
-		
-		eline();
-	}
+
 	
+	
+
+
+	/**
+	 * 타이틀 출력 메소드
+	 * 
+	 * @param label 타이틀 문자열
+	 */
+	public void title(String label) {
+	      eline();
+	      
+	      for (int i = 0; i < (Util.LONG / 2)-(label.length()/2); i++) {
+	         System.out.print(" ");
+	      }
+	      System.out.println(label);
+	      
+	      eline();
+	}
 
 }

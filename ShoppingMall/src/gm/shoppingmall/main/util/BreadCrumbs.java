@@ -3,7 +3,7 @@ package gm.shoppingmall.main.util;
 import java.util.Iterator;
 import java.util.Stack;
 
-import gm.shoppingmall.main.Mainclass;
+import gm.shoppingmall.main.MainClass;
 
 public class BreadCrumbs{
 	private  Stack<String> stack;
@@ -36,7 +36,7 @@ public class BreadCrumbs{
 		
 		System.out.println();
 		
-		String temp = String.format("[%s 접속중] ", Mainclass.isAuth != null ? Mainclass.isAuth : "guest");
+		String temp = String.format("[%s 접속중] ", MainClass.isAuth != null ? MainClass.isAuth : "guest");
 		
 		while(iter.hasNext()) {
 			temp = temp + iter.next() + "▶";

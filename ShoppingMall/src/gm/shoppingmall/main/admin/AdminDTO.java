@@ -15,4 +15,9 @@ public class AdminDTO {
 	public void setPw(String pw) {
 		this.pw = pw;
 	}
+
+	@Override
+	public String toString() {
+		return "AdminDTO [id=" + id + ", pw=" + pw + "]";
+	}
 }

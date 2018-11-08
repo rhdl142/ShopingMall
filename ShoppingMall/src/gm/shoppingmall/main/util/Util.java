@@ -23,4 +23,6 @@ public class Util {
 	public final static String ELSEMENT = "잘못입력하셨습니다. 다시입력해주시기 바랍니다.";
 	
 	
+	public final static String[] adminMenu = {"회원 관리","상품 관리","주문/배송 관리","고객 센터 관리","매출 관리","상위 메뉴로 돌아가기","종료"};
+	
 }
