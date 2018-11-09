@@ -13,22 +13,7 @@ public class AdminDAO {
 		conn = DBUtil.getConnection();
 	}
 
-	public AdminDTO getAdminDTO() {
-		String sql = "select * from admin";
-		try {
-			Statement stat = conn.createStatement();
-			ResultSet rs = stat.executeQuery(sql);
-			if(rs.next()) {
-				AdminDTO dto = new AdminDTO();
-				dto.setId(rs.getString("ID"));
-				dto.setPw(rs.getString("PW"));
-				return dto;
-			}
-		} catch (Exception e) {
-			System.out.println("AdminDAO.getAdminDTO :" + e.toString());
-		}
-		return null;
-	}
+	
 	
 	
 	

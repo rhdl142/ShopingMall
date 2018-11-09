@@ -24,6 +24,8 @@ public class MainController {
 		mdao = new MainDAO();
 		admin = new AdminController();
 		customer=new CustomerController();
+		AdminController.adto = mdao.getAdminDTO();
+		//MainClass.isAuth = 
 	}
 	
 	/**
@@ -59,9 +61,10 @@ public class MainController {
 		out.title("로그인");
 		String id = scan.next("아이디");
 		String pw = scan.next("비밀번호");
-		if(id==AdminController.adto.getId() && pw == AdminController.adto.getPw()) {
-			admin.main();
-			return;
+		
+		if(id.equals(AdminController.adto.getId()) && pw.equals(AdminController.adto.getPw()) ) {
+			admin.www();
+			
 		}
 		
 		int result = mdao.logincheck(id,pw);
