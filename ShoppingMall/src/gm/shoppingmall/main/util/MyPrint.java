@@ -2,6 +2,8 @@ package gm.shoppingmall.main.util;
 
 import java.util.Scanner;
 
+import gm.shoppingmall.main.MainClass;
+
 /**
  * 출력기능을 담당하는 클래스
  * @author user
@@ -145,6 +147,8 @@ public class MyPrint {
 	 * @param label 타이틀 문자열
 	 */
 	public void title(String label) {
+		  
+		  MainClass.crumb.now();
 	      eline();
 	      
 	      for (int i = 0; i < (Util.LONG / 2)-(label.length()/2); i++) {

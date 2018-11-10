@@ -17,7 +17,7 @@ public class AdminController {
 		adao = new AdminDAO();
 	}
 
-	public void www() {
+	public void main() {
 		while (true) {
 
 			MainClass.crumb.in("관리자");
