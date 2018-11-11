@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 import gm.shoppingmall.main.admin.AdminDTO;
+import gm.shoppingmall.main.customer.CustomerDTO;
 import gm.shoppingmall.main.util.DBUtil;
 import oracle.jdbc.OracleTypes;
 
@@ -94,6 +95,35 @@ public class MainDAO {
 		
 		return 0;
 	}
+
+
+	public CustomerDTO getCustomer(String id) {
+		String sql = "select * from Customer c inner join CustomerLogin cl on c.seq = cl.customer where id = ?";
+		try {
+			PreparedStatement stat = conn.prepareStatement(sql);
+			stat.setString(1, id);
+			ResultSet rs = stat.executeQuery();
+			if(rs.next()) {
+				CustomerDTO dto = new CustomerDTO();
+				dto.setSeq(rs.getString(1));
+				dto.setName(rs.getString(2));
+				dto.setSsn(rs.getString(3));
+				dto.setTel(rs.getString(4));
+				dto.setEmail(rs.getString(5));
+				dto.setAddress(rs.getString(6));
+				dto.setMembership(rs.getString(7));
+				return dto;
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
+	
+	
 	
 	
 

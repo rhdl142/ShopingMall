@@ -40,6 +40,7 @@ public class MyPrint {
 	 *            메뉴리스트
 	 */
 	public void menu(String[] str) {
+		line();
 		for (int i = 1; i <= str.length; i++) {
 			System.out.printf("%s. %s\n", i, str[i - 1]);
 		}
@@ -54,7 +55,11 @@ public class MyPrint {
 	 */
 	public void header(String[] list) {
 		for (int i = 0; i < list.length; i++) {
-			System.out.printf("%s\t", list[i]);
+			if(list[i].equals(" ")) {
+				System.out.print("\t");
+				continue;
+			}
+			System.out.printf("[%s]\t", list[i]);
 		}
 		System.out.println();
 	}
@@ -79,7 +84,7 @@ public class MyPrint {
 	 */
 	public void pause() {
 		line();
-		System.out.println("\t\t\t\t★계속하시려면 엔터키를 입력하세요★");
+		System.out.println("\t\t\t★계속하시려면 엔터키를 입력하세요★");
 		line();
 		Scanner sc = new Scanner(System.in);
 		sc.nextLine();
@@ -151,7 +156,7 @@ public class MyPrint {
 		  MainClass.crumb.now();
 	      eline();
 	      
-	      for (int i = 0; i < (Util.LONG / 2)-(label.length()/2); i++) {
+	      for (int i = 0; i < (Util.LONG / 2)-label.length(); i++) {
 	         System.out.print(" ");
 	      }
 	      System.out.println(label);

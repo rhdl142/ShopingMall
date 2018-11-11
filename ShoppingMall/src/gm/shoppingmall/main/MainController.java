@@ -109,6 +109,7 @@ public class MainController {
 			// 아이디 비밀번호 1개이면
 			// 로그인 성공
 			MainClass.isAuth = id;
+			Util.LoginCustomer=mdao.getCustomer(id);
 			MainClass.crumb.in("회원 메뉴");
 			customer.main();
 			MainClass.crumb.out();

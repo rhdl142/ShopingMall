@@ -5,6 +5,35 @@ public class BasketDTO {
 	private String customer;
 	private String product;
 	private String amount;
+	private String productName;
+	private String price;
+	private String big;
+	private String small;
+	
+	public String getProductName() {
+		return productName;
+	}
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+	public String getPrice() {
+		return price;
+	}
+	public void setPrice(String price) {
+		this.price = price;
+	}
+	public String getBig() {
+		return big;
+	}
+	public void setBig(String big) {
+		this.big = big;
+	}
+	public String getSmall() {
+		return small;
+	}
+	public void setSmall(String small) {
+		this.small = small;
+	}
 	public String getSeq() {
 		return seq;
 	}
