@@ -152,7 +152,9 @@ public class MyPrint {
 	 * @param label 타이틀 문자열
 	 */
 	public void title(String label) {
-		  
+		  for(int i =0; i<30; i++) {
+			  System.out.println();
+		  }
 		  MainClass.crumb.now();
 	      eline();
 	      

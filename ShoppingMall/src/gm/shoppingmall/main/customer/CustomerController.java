@@ -294,7 +294,7 @@ public class CustomerController {
 		for(NoticeDTO dto : list) {
 			data.add(new Object[] {
 				dto.getSeq()
-				,dto.getContent().substring(0, 8)+"..."
+				,dto.getContent().substring(0, 5)+"..."
 				,dto.getDay()	
 			});
 		}

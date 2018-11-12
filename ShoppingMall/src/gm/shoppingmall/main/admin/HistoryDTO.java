@@ -8,7 +8,18 @@ public class HistoryDTO {
 	private String amount;
 	private String status;
 	private String productPrice;
+	private String statusName;
 	
+	
+	public String getStatusName() {
+		return statusName;
+	}
+	public void setStatusName(String statusName) {
+		this.statusName = statusName;
+	}
+	public void setProduct(String product) {
+		this.product = product;
+	}
 	public String getProductPrice() {
 		return productPrice;
 	}
