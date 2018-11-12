@@ -7,6 +7,7 @@ public class HistoryDTO {
 	private String prduct;
 	private String amount;
 	private String status;
+	private String statusName;
 	public String getSeq() {
 		return seq;
 	}
@@ -47,5 +48,11 @@ public class HistoryDTO {
 	public String toString() {
 		return "HistoryDTO [seq=" + seq + ", customer=" + customer + ", day=" + day + ", prduct=" + prduct + ", amount="
 				+ amount + ", status=" + status + "]";
+	}
+	public String getStatusName() {
+		return statusName;
+	}
+	public void setStatusName(String statusName) {
+		this.statusName = statusName;
 	}
 }
